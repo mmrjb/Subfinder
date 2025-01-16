@@ -18,7 +18,6 @@ def find_subdomains_with_nslookup(domain, wordlist_file):
 
                     if "Name:" in result.stdout:
                         subdomains.append({"subdomain": subdomain, "status": "resolved"})
-                        print(f"Found: {subdomain}")
                     else:
                         subdomains.append({"subdomain": subdomain, "status": "unresolved"})
 
